@@ -81,7 +81,7 @@ const OurProducts = ({ products }: { products: Array<ProductType> }) => {
       <SectionSubTitle text="Variedad de Computadoras, Accesorios, Productos Gamer y más" />
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {products.map((p) => {
-          return <Product product={p} />;
+          return <Product key={p._id} product={p} />;
         })}
       </div>
     </SectionContainer>
@@ -92,7 +92,7 @@ const Home = ({
   slides,
   products,
 }: {
-  slides: SlideType;
+  slides: Array<SlideType>;
   products: Array<ProductType>;
 }) => {
   return (
