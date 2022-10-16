@@ -1,30 +1,17 @@
-import { useRef} from "react";
-import styles from "./styles.module.css";
 import Image from "next/image";
-import SlideService from "services/SlideService";
-// SwiperCore.use([Keyboard, Pagination, Navigation, Autoplay]);
-import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useRef } from "react";
+import styles from "./styles.module.css";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { Pagination, Navigation, Autoplay } from "swiper";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { SlideType } from "types";
 
-const SimpleSlider = ({ slides }: any) => {
+const SimpleSlider = ({ slides }: { slides: Array<SlideType> }) => {
   const swiperRef = useRef();
-  // const [slides, setSlides] = useState([]);
   const handleMouseEnter = () => {
-    // swiperRef.current.swiper.autoplay.stop();
   };
-
-  // useEffect(() => {
-  //   getSlides();
-
-  //   return () => {
-  //     setSlides([]);
-  //   };
-  // }, []);
 
   return (
     <div className="row">
@@ -88,13 +75,14 @@ const SimpleSlider = ({ slides }: any) => {
         //   },
         // }}
       >
-        {slides.map((e: any) => (
+        {slides.map((e) => (
           <SwiperSlide key={e._id}>
             <Image
               // style={{ width: "100%", height: "100%" }}
               src={e.url}
               width="1350px"
               height="600"
+              alt={e.url}
               // objectFit="contain"
               // layout="fill"
             />

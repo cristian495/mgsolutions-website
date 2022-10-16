@@ -22,7 +22,7 @@ const ByCategory = ({ products }: { products: Array<ProductType> }) => {
       </div>
       <div className="flex flex-wrap justify-center">
         {products.map((e) => (
-          <Product product={e} />
+          <Product key={e._id} product={e} />
         ))}
       </div>
 

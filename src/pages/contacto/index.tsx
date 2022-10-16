@@ -53,8 +53,8 @@ const Contacto = () => {
           Contáctenos
         </div>
         <ul className="grid grid-cols-1 my-10 md:grid-cols-3 lg:grid-cols-4">
-          {contactItems.map((e) => (
-            <li className=" m-4 flex flex-col justify-center text-center w-50 h-40 md:px-3 ">
+          {contactItems.map((e, i) => (
+            <li key={i} className=" m-4 flex flex-col justify-center text-center w-50 h-40 md:px-3 ">
               <i className={`${e.icon} text-3xl text-blue-200 mb-4`}></i>
               {e.content}
             </li>

@@ -14,6 +14,7 @@ const Product = ({ product }: { product: ProductType }) => {
           className="group-hover:scale-110 duration-300 transition-all "
           width="270"
           height="240"
+          alt={product.slug}
           src={product.mainImage}
         />
 

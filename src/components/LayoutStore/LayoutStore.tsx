@@ -77,7 +77,7 @@ const LayoutStore = ({
               <div className="py-4 overflow-y-auto">
                 <ul className="space-y-2">
                   {categories.map((e) => (
-                    <li>
+                    <li key={e.slug}>
                       <Link href={`/tienda/${e.slug}`}>
                         <a className="flex items-center px-5 py-2 hover:bg-gray-200 text-base font-normal text-gray-500  group hover:text-black">
                           <i

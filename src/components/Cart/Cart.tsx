@@ -31,8 +31,8 @@ const Cart = () => {
 
       <ul className="py-10 overflow-y-auto max-h-[75vh] block">
         {cartItems.map((e) => (
-          <li className="flex gap-3 max-h-24 relative my-5">
-            <Image src={e.product.mainImage} width={80} height={70} />
+          <li key={e.product._id} className="flex gap-3 max-h-24 relative my-5">
+            <Image src={e.product.mainImage} width={80} height={70} alt={e.product.slug} />
             <div>
               <h5 className="font-semibold text-gray-700 mb-2 max-w-xs w-62">
                 <Link href={`/producto/${e.product.slug}/${e.product._id}`}>
@@ -60,8 +60,8 @@ const Cart = () => {
       {cartItems.length >= 1 && (
         <div className="fixed border flex flex-col right-40 bottom-10 z-100">
           <Link href="/pagar">
-            <a className="font-semibold p-3 px-8 bg-blue-400 rounded-lg text-sm text-white hover:bg-blue-200 transition-all duration-150">
               REALIZAR PAGO
+            <a className="font-semibold p-3 px-8 bg-blue-400 rounded-lg text-sm text-white hover:bg-blue-200 transition-all duration-150">
             </a>
           </Link>
         </div>
