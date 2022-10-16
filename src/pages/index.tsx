@@ -62,7 +62,7 @@ const OurServices = () => {
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {services.map((e) => (
           <div key={e.title} className="flex items-center flex-col my-10 ">
-            <Image src={e.img} width="100" height="100"></Image>
+            <Image src={e.img} width="100" height="100" alt={e.title}></Image>
             <h6 className="text-md text-center md:text-lg font-semibold  mt-5 mb-2">
               {e.title}
             </h6>
