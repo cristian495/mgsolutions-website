@@ -60,8 +60,8 @@ const Cart = () => {
       {cartItems.length >= 1 && (
         <div className="fixed border flex flex-col right-40 bottom-10 z-100">
           <Link href="/pagar">
-              REALIZAR PAGO
             <a className="font-semibold p-3 px-8 bg-blue-400 rounded-lg text-sm text-white hover:bg-blue-200 transition-all duration-150">
+              REALIZAR PAGO
             </a>
           </Link>
         </div>
